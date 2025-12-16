@@ -1,18 +1,154 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <title>Job Application Form</title>
-        <link rel="styles/css" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>This is Header</h1>
-        </header>
-        <main>
-            <h2>This is main</h2>
-        </main>
-        <footer>
-            <h3>This is footer</h3>
-        </footer>
-    </body>
+
+<head>
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <form>
+            <fieldset>
+                <h1>Job Application</h1>
+
+                <h2>
+                    Personal Information
+                </h2>
+                <div class="form">
+                    <div class="field">
+                        <label for="fname">Name</label>
+                        <div class="inputs">
+                            <div class="input-group">
+                                <input type="text" id="fname" name="fname">
+                                <small>First Name</small>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="text" id="lname" name="lname">
+                                <small>Last Name</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input class="input-field" type="email" id="email" name="email" placeholder="user@example.com">
+                    </div>
+                    <div class="field">
+                        <label for="education">Education</label>
+                        <select class="input-field" id="education" name="education" required>
+                            <option value="" disabled selected>Please Choose</option>
+                            <option value="matric">Matric</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="bachelors">Bachelors</option>
+                            <option value="masters">Masters</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="resume">Resume</label>
+                        <input class="input-field" type="file" id="resume" name="resume">
+                    </div>
+                    <div class="field">
+                        <label for="address1">Address</label>
+                        <div class="inputs">
+                            <div class="input-group address">
+                                <input type="text" id="address1" name="address1">
+                                <small>Address 1</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label></label>
+                        <div class="inputs">
+                            <div class="input-group address">
+                                <input type="text" id="address2" name="address2">
+                                <small>Address 2</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label></label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select a Country</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="canada">Canada</option>
+                            <option value="japan">Japan</option>
+                            <option value="china">China</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label></label>
+                        <div class="inputs">
+                            <div class="input-group address city">
+                                <input type="text" id="city" name="city">
+                                <small>City</small>
+                            </div>
+                            <div class="input-group address state">
+                                <input type="text" id="state" name="state">
+                                <small>State</small>
+                            </div>
+                            <div class="input-group address zip-code">
+                                <input type="text" id="zip-code" name="zip-code">
+                                <small>Zip Code</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <div class="inputs">
+                            <div class="input-group address phone-code">
+                                <input type="text" id="phone-code" name="phone-code">
+                            </div>
+                            <input type="text" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="hobbies">What are your hobbies?</label>
+                        <input class="input-field" type="text" id="hobbies" name="hobbies">
+                    </div>
+                    <h2>
+                        Previous/Current Employment Details
+                    </h2>
+                    <div class="field">
+                        <label for="company">Company Name</label>
+                        <input class="input-field" type="text" id="company" name="company">
+                    </div>
+                    <div class="field">
+                        <label for="job">Job Title</label>
+                        <input class="input-field" type="text" id="job" name="job">
+                    </div>
+                    <div class="field">
+                        <label for="time">How long were you here?</label>
+                        <input class="input-field" type="text" id="time" name="time">
+                    </div>
+                    <h2>
+                        Reference # 1
+                    </h2>
+                    <div class="field">
+                        <label for="ref1-name">Name</label>
+                        <input class="input-field" type="text" id="ref1-name" name="ref1-name">
+                    </div>
+                    <div class="field">
+                        <label for="ref1-phone">Phone</label>
+                        <input class="input-field" type="text" id="ref1-phone" name="ref1-phone">
+                    </div>
+                    <h2>
+                        Reference # 2
+                    </h2>
+                    <div class="field">
+                        <label for="ref2-name">Name</label>
+                        <input class="input-field" type="text" id="ref2-name" name="ref2-name">
+                    </div>
+                    <div class="field">
+                        <label for="ref2-phone">Phone</label>
+                        <input class="input-field" type="text" id="ref2-phone" name="ref2-phone">
+                    </div>
+                    <div class="div-btn">
+                        <button class="btn">Apply</button>
+                    </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
 </html>
