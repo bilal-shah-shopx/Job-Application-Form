@@ -4,28 +4,141 @@
 <head>
     <title>Job Application Form</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .field {
+            display: flex;
+            gap: 0px;
+        }
+
+        .field label,
+        .field label:empty {
+            width: 150px;
+        }
+
+        .inputs {
+            display: flex;
+            gap: 12px;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-field {
+            padding: 2px 5px;
+            appearance: none;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        small {
+            color: gray;
+        }
+
+        .arrow-bottom {
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid black;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            font-size: xx-small;
+        }
+
+        .input-field {
+            width: 60%;
+            border: 1px solid #ccc;
+        }
+
+        .address {
+            text-align: center;
+        }
+
+        .input-group.address input {
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+        h3 {
+            color: maroon;
+        }
+
+        .div-btn {
+            text-align: center;
+        }
+
+        .btn {
+            color: white;
+            background-color: maroon;
+            width: 12%;
+            border: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        fieldset {
+            border: 0.1px solid rgb(225, 225, 225);
+            border-top: 15px solid maroon;
+        }
+
+        .phone-code {
+            width: 12%;
+        }
+
+        .city {
+            width: 50%;
+        }
+
+        .state {
+            width: 10%;
+        }
+
+        .zip-code {
+            width: 20%;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <form>
-            <fieldset>
+        <form style="display: flex; justify-content: center;">
+            <fieldset style="width: 40%;">
                 <h1>Job Application</h1>
 
-                <h2>
+                <h3>
                     Personal Information
-                </h2>
+                </h3>
                 <div class="form">
                     <div class="field">
                         <label for="fname">Name</label>
                         <div class="inputs">
                             <div class="input-group">
-                                <input type="text" id="fname" name="fname">
+                                <input style="width: 135px; border: 1px solid #ccc;" type="text" id="fname" name="fname">
                                 <small>First Name</small>
                             </div>
 
                             <div class="input-group">
-                                <input type="text" id="lname" name="lname">
+                                <input style="width: 135px; border: 1px solid #ccc;" type="text" id="lname" name="lname">
                                 <small>Last Name</small>
                             </div>
                         </div>
@@ -34,25 +147,26 @@
                         <label for="email">Email</label>
                         <input class="input-field" type="email" id="email" name="email" placeholder="user@example.com">
                     </div>
-                    <div class="field">
+                    <div class="field select-wrapper">
                         <label for="education">Education</label>
-                        <select class="input-field" id="education" name="education" required>
+                        <select class="input-field select-field" id="education" name="education" required>
                             <option value="" disabled selected>Please Choose</option>
                             <option value="matric">Matric</option>
                             <option value="intermediate">Intermediate</option>
                             <option value="bachelors">Bachelors</option>
                             <option value="masters">Masters</option>
                         </select>
+                        <div class="arrow-bottom"></div>
                     </div>
                     <div class="field">
                         <label for="resume">Resume</label>
-                        <input class="input-field" type="file" id="resume" name="resume">
+                        <input style="padding: 2px;" class="input-field" type="file" id="resume" name="resume">
                     </div>
                     <div class="field">
                         <label for="address1">Address</label>
                         <div class="inputs">
                             <div class="input-group address">
-                                <input type="text" id="address1" name="address1">
+                                <input style="width: 183%;" type="text" id="address1" name="address1">
                                 <small>Address 1</small>
                             </div>
                         </div>
@@ -61,23 +175,24 @@
                         <label></label>
                         <div class="inputs">
                             <div class="input-group address">
-                                <input type="text" id="address2" name="address2">
+                                <input style="width: 183%;" type="text" id="address2" name="address2">
                                 <small>Address 2</small>
                             </div>
                         </div>
                     </div>
-                    <div class="field">
+                    <div class="field select-wrapper">
                         <label></label>
-                        <select id="country" name="country" required>
+                        <select class="select-field" style="width: 60%;" id="country" name="country" required>
                             <option value="" disabled selected>Select a Country</option>
                             <option value="pakistan">Pakistan</option>
                             <option value="canada">Canada</option>
                             <option value="japan">Japan</option>
                             <option value="china">China</option>
                         </select>
+                        <div class="arrow-bottom"></div>
                     </div>
                     <div class="field">
-                        <label></label>
+                        <label style="width: 210px;"></label>
                         <div class="inputs">
                             <div class="input-group address city">
                                 <input type="text" id="city" name="city">
@@ -94,21 +209,23 @@
                         </div>
                     </div>
                     <div class="field">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone" style="width: 150px;">Phone Number</label>
                         <div class="inputs">
                             <div class="input-group address phone-code">
                                 <input type="text" id="phone-code" name="phone-code">
                             </div>
-                            <input type="text" id="phone" name="phone">
+                            <div class="input-group address">
+                                <input style="width: 150%;" type="text" id="phone" name="phone">
+                            </div>
                         </div>
                     </div>
-                    <div class="field">
                         <label for="hobbies">What are your hobbies?</label>
-                        <input class="input-field" type="text" id="hobbies" name="hobbies">
+                    <div class="field">
+                        <input style="width: 100%;" class="input-field" type="text" id="hobbies" name="hobbies">
                     </div>
-                    <h2>
+                    <h3>
                         Previous/Current Employment Details
-                    </h2>
+                    </h3>
                     <div class="field">
                         <label for="company">Company Name</label>
                         <input class="input-field" type="text" id="company" name="company">
@@ -121,9 +238,9 @@
                         <label for="time">How long were you here?</label>
                         <input class="input-field" type="text" id="time" name="time">
                     </div>
-                    <h2>
+                    <h3>
                         Reference # 1
-                    </h2>
+                    </h3>
                     <div class="field">
                         <label for="ref1-name">Name</label>
                         <input class="input-field" type="text" id="ref1-name" name="ref1-name">
@@ -132,9 +249,9 @@
                         <label for="ref1-phone">Phone</label>
                         <input class="input-field" type="text" id="ref1-phone" name="ref1-phone">
                     </div>
-                    <h2>
+                    <h3>
                         Reference # 2
-                    </h2>
+                    </h3>
                     <div class="field">
                         <label for="ref2-name">Name</label>
                         <input class="input-field" type="text" id="ref2-name" name="ref2-name">
@@ -144,7 +261,7 @@
                         <input class="input-field" type="text" id="ref2-phone" name="ref2-phone">
                     </div>
                     <div class="div-btn">
-                        <button class="btn">Apply</button>
+                        <button class="btn" style="padding: 4px; width: 13%;">Apply</button>
                     </div>
             </fieldset>
         </form>
