@@ -1,144 +1,172 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", serif;
 }
 
 form {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.main-fieldset {
+  width: 40%;
+  border: 0.1px solid rgb(225, 225, 225);
+  border-top: 15px solid maroon;
 }
 
-.field {
-    display: flex;
-    gap: 0px;
+fieldset{
+  position: relative;
 }
 
-#fname,
-#lname {
-    width: 135px;
-    border: 1px solid #ccc;
+.personal-fieldset, .emp-fieldset, .ref1-fieldset, .ref2-fieldset {
+  border:none;
 }
 
-#resume {
-    padding: 2px;
+.main-heading, h1, .div-btn, .address-input, .city-row {
+  text-align: center;
 }
 
-#address1,
-#address2 {
-    width: 183%;
+
+.main-fieldset legend {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+  font-weight: bolder;
+  font-size: xx-large;
 }
 
-#phone {
-    width: 150%;
+.personal-fieldset legend, .emp-fieldset legend, .ref1-fieldset legend, .ref2-fieldset legend {
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  font-weight: bolder;
+  font-size: larger;
+  color: maroon;
 }
 
-#hobbies {
-    width: 100%;
+.personal-fieldset legend {
+  top: 85px;
+  left: 0px;
 }
 
-.field label,
-.field label:empty {
-    width: 150px;
-}
-
-.inputs {
-    display: flex;
-    gap: 12px;
-}
-
-.select-wrapper {
-    position: relative;
-    width: 80%;
-}
-
-.select-field {
-    width: 100%;
-    padding: 3px;
-    appearance: none;
-    border: 1px solid #ccc;
-    cursor: pointer;
+h3 {
+  color: maroon;
 }
 
 small {
     color: gray;
 }
 
-.arrow-bottom {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+.personal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 120px;
+}
 
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid black;
+.emp-container, .ref1-container, .ref2-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 70px;
+}
+
+.field {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+label {
+  width: 150px;
+}
+
+.inputs {
+  display: flex;
+  gap: 8px;
+  width: 60%;
+}
+
+.address-input {
+  flex-direction: column;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    font-size: xx-small;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+#resume {
+  color: #ccc;
+}
+
+input,
+select {
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 3px;
 }
 
 .input-field {
-    width: 60%;
-    border: 1px solid #ccc;
+  width: 60%;
 }
 
-.address {
-    text-align: center;
-}
-
-.input-group.address input {
-    width: 100%;
-    border: 1px solid #ccc;
-}
-
-h3 {
-    color: maroon;
-}
-
-.div-btn {
-    text-align: center;
-}
-
-.btn {
-    color: white;
-    background-color: maroon;
-    border: none;
-    padding: 4px;
-    width: 13%;
-}
-
-h1 {
-    text-align: center;
-}
-
-fieldset {
-    width: 40%;
-    border: 0.1px solid rgb(225, 225, 225);
-    border-top: 15px solid maroon;
+.select-field {
+  appearance: none;
+  background-image: 
+    linear-gradient(45deg, transparent 50%, black 50%),
+    linear-gradient(135deg, black 50%, transparent 50%);
+  background-position:
+    calc(100% - 16px) 50%,
+    calc(100% - 10px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
 }
 
 .phone-code {
-    width: 12%;
+  width: 40px;
 }
 
-.city {
-    width: 50%;
+.phone {
+  flex: 1;
 }
 
-.state {
-    width: 10%;
+.btn {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  width: 13%;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-.zip-code {
-    width: 20%;
+.city-row, .phone-row {
+  gap: 4px;
+}
+
+.city-row input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.country, .city, .address-2{
+  margin-left: 162px;
+  width: 100%;
+}
+
+#city {
+  flex: 4;
+}
+
+#state {
+  flex: 1;
+}
+
+#zip {
+  flex: 2;
+}
+
+#hobbies {
+    width: 100%;
 }

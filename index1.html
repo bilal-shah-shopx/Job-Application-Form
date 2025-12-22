@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <form>
+            <fieldset>
+                <h1>Job Application</h1>
+
+                <h3>Personal Information</h3>
+
+                <div class="form">
+
+                    <!-- Name -->
+                    <div class="field">
+                        <label for="fname">Name</label>
+                        <div class="input-field inputs">
+                            <div class="input-group">
+                                <input type="text" id="fname" name="fname" required>
+                                <small>First Name</small>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="lname" name="lname" required>
+                                <small>Last Name</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input class="input-field" type="email" id="email" name="email" placeholder="user@example.com">
+                    </div>
+
+                    <!-- Education -->
+                    <div class="field">
+                        <label>Education</label>
+                        <select class="input-field select-field" required>
+                            <option value="" disabled selected>Please Choose</option>
+                            <option value="matric">Matric</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="bachelors">Bachelors</option>
+                            <option value="masters">Masters</option>
+                        </select>
+                    </div>
+
+                    <!-- Resume -->
+                    <div class="field">
+                        <label for="resume">Resume</label>
+                        <input class="input-field" type="file" id="resume" name="resume" required>
+                    </div>
+
+                    <!-- Addresss -->
+                    <div class="field">
+                        <label for="address1">Address</label>
+                        <div class="input-field inputs address-input">
+                            <div class="input-group">
+                                <input type="text" id="address1" name="address1" required>
+                                <small>Address 1</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label></label>
+                        <div class="input-field inputs address-input">
+                            <div class="input-group">
+                                <input type="text" id="address2" name="address2" required>
+                                <small>Address 2</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label></label>
+                        <div class="input-field inputs address-input">
+                            <div class="input-group">
+                                <select class="select-field" required>
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="china">China</option>
+                                </select>
+                                <small>Country</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label></label>
+                        <div class="input-field inputs city-row">
+                            <div class="input-group" id="city">
+                                <input type="text" name="city" required>
+                                <small>City</small>
+                            </div>
+                            <div class="input-group" id="state">
+                                <input type="text" name="state" required>
+                                <small>State</small>
+                            </div>
+                            <div class="input-group" id="zip">
+                                <input type="text" name="zip" required>
+                                <small>Zip Code</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+
+                    <div class="field">
+                        <label>Phone</label>
+                        <div class="input-field inputs phone-row">
+                            <input class="phone-code" type="text">
+                            <input class="phone" type="text">
+                        </div>
+                    </div>
+
+                    <!-- Hobbies -->
+
+                    <div>
+                        <label>What are your hobbies?</label>
+                        <div class="field">
+                            <input class="input-field" type="text" id="hobbies" name="hobbies">
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <h3>Previous/Current Employment Details</h3>
+
+                    <div class="field">
+                        <label for="company">Company Name</label>
+                        <input class="input-field" type="text" id="company" name="company">
+                    </div>
+                    <div class="field">
+                        <label for="job">Job Title</label>
+                        <input class="input-field" type="text" id="job" name="job">
+                    </div>
+                    <div class="field">
+                        <label for="time">How long were you here?</label>
+                        <input class="input-field" type="text" id="time" name="time">
+                    </div>
+
+                    <!--Reference-->
+                    <h3>
+                        Reference # 1
+                    </h3>
+                    <div class="field">
+                        <label for="ref1-name">Name</label>
+                        <input class="input-field" type="text" id="ref1-name" name="ref1-name">
+                    </div>
+                    <div class="field">
+                        <label for="ref1-phone">Phone</label>
+                        <input class="input-field" type="text" id="ref1-phone" name="ref1-phone">
+                    </div>
+                    <h3>
+                        Reference # 2
+                    </h3>
+                    <div class="field">
+                        <label for="ref2-name">Name</label>
+                        <input class="input-field" type="text" id="ref2-name" name="ref2-name">
+                    </div>
+                    <div class="field">
+                        <label for="ref2-phone">Phone</label>
+                        <input class="input-field" type="text" id="ref2-phone" name="ref2-phone">
+                    </div>
+
+                    <!--Apply Button-->
+                    <div class="div-btn">
+                        <button class="btn">Apply</button>
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

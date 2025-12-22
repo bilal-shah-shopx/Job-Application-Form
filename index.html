@@ -1,118 +1,147 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
-    <head>
-        <title>Job Application Form</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <main>
-            <form>
-                <fieldset>
-                    <h1>Job Application</h1>
+<body>
+    <main>
+        <form>
+            <fieldset class="main-fieldset">
+                <legend>
+                    Job Application
+                </legend>
 
-                    <h3>
+                <fieldset class="personal-fieldset">
+                    <legend>
                         Personal Information
-                    </h3>
-                    <div class="form">
+                    </legend>
+
+                    <div class="personal-container">
+
+                        <!-- Name -->
                         <div class="field">
                             <label for="fname">Name</label>
-                            <div class="inputs">
+                            <div class="input-field inputs">
                                 <div class="input-group">
-                                    <input type="text" id="fname" name="fname">
+                                    <input type="text" id="fname" name="fname" required>
                                     <small>First Name</small>
                                 </div>
-
                                 <div class="input-group">
-                                    <input type="text" id="lname" name="lname">
+                                    <input type="text" id="lname" name="lname" required>
                                     <small>Last Name</small>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Email -->
                         <div class="field">
                             <label for="email">Email</label>
-                            <input class="input-field" type="email" id="email" name="email" placeholder="user@example.com">
+                            <input class="input-field" type="email" id="email" name="email"
+                                placeholder="user@example.com">
                         </div>
-                        <div class="field select-wrapper">
-                            <label for="education">Education</label>
-                            <select class="input-field select-field" id="education" name="education" required>
+
+                        <!-- Education -->
+                        <div class="field">
+                            <label>Education</label>
+                            <select class="input-field select-field" required>
                                 <option value="" disabled selected>Please Choose</option>
                                 <option value="matric">Matric</option>
                                 <option value="intermediate">Intermediate</option>
                                 <option value="bachelors">Bachelors</option>
                                 <option value="masters">Masters</option>
                             </select>
-                            <div class="arrow-bottom"></div>
                         </div>
+
+                        <!-- Resume -->
                         <div class="field">
                             <label for="resume">Resume</label>
-                            <input class="input-field" type="file" id="resume" name="resume">
+                            <input class="input-field" type="file" id="resume" name="resume" required>
                         </div>
+
+                        <!-- Addresss -->
                         <div class="field">
                             <label for="address1">Address</label>
-                            <div class="inputs">
-                                <div class="input-group address">
-                                    <input type="text" id="address1" name="address1">
+                            <div class="input-field inputs address-input">
+                                <div class="input-group">
+                                    <input type="text" id="address1" name="address1" required>
                                     <small>Address 1</small>
                                 </div>
                             </div>
                         </div>
-                        <div class="field">
-                            <label></label>
-                            <div class="inputs">
-                                <div class="input-group address">
-                                    <input type="text" id="address2" name="address2">
+
+                        <div class="field address-2">
+                            <div class="input-field inputs address-input">
+                                <div class="input-group">
+                                    <input type="text" id="address2" name="address2" required>
                                     <small>Address 2</small>
                                 </div>
                             </div>
                         </div>
-                        <div class="field select-wrapper">
-                            <label style="width: 230px;"></label>
-                            <select class="select-field" id="country" name="country" required>
-                                <option value="" disabled selected>Select a Country</option>
-                                <option value="pakistan">Pakistan</option>
-                                <option value="canada">Canada</option>
-                                <option value="japan">Japan</option>
-                                <option value="china">China</option>
-                            </select>
-                            <div class="arrow-bottom"></div>
+
+                        <div class="field country">
+                            <div class="input-field inputs address-input">
+                                <div class="input-group">
+                                    <select class="select-field" required>
+                                        <option value="" disabled selected>Select Country</option>
+                                        <option value="pakistan">Pakistan</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="china">China</option>
+                                    </select>
+                                    <small>Country</small>
+                                </div>
+                            </div>
                         </div>
-                        <div class="field">
-                            <label style="width: 210px;"></label>
-                            <div class="inputs">
-                                <div class="input-group address city">
-                                    <input type="text" id="city" name="city">
+
+                        <div class="field city">
+                            <div class="input-field inputs city-row">
+                                <div class="input-group" id="city">
+                                    <input type="text" name="city" required>
                                     <small>City</small>
                                 </div>
-                                <div class="input-group address state">
-                                    <input type="text" id="state" name="state">
+                                <div class="input-group" id="state">
+                                    <input type="text" name="state" required>
                                     <small>State</small>
                                 </div>
-                                <div class="input-group address zip-code">
-                                    <input type="text" id="zip-code" name="zip-code">
+                                <div class="input-group" id="zip">
+                                    <input type="text" name="zip" required>
                                     <small>Zip Code</small>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Phone -->
+
                         <div class="field">
-                            <label for="phone" style="width: 150px;">Phone Number</label>
-                            <div class="inputs">
-                                <div class="input-group address phone-code">
-                                    <input type="text" id="phone-code" name="phone-code">
-                                </div>
-                                <div class="input-group address">
-                                    <input type="text" id="phone" name="phone">
-                                </div>
+                            <label>Phone</label>
+                            <div class="input-field inputs phone-row">
+                                <input class="phone-code" type="text">
+                                <input class="phone" type="text">
                             </div>
                         </div>
-                        <label for="hobbies">What are your hobbies?</label>
-                        <div class="field">
-                            <input class="input-field" type="text" id="hobbies" name="hobbies">
+
+                        <!-- Hobbies -->
+
+                        <div>
+                            <label>What are your hobbies?</label>
+                            <div class="field">
+                                <input class="input-field" type="text" id="hobbies" name="hobbies">
+                            </div>
                         </div>
-                        <h3>
-                            Previous/Current Employment Details
-                        </h3>
+                    </div>
+                </fieldset>
+
+
+                <!-- Experience -->
+                <fieldset class="emp-fieldset">
+                    <legend>
+                        Previous/Current Employment Details
+                    </legend>
+
+                    <div class="emp-container">
                         <div class="field">
                             <label for="company">Company Name</label>
                             <input class="input-field" type="text" id="company" name="company">
@@ -125,10 +154,17 @@
                             <label for="time">How long were you here?</label>
                             <input class="input-field" type="text" id="time" name="time">
                         </div>
-                        <h3>
-                            Reference # 1
-                        </h3>
-                        <div class="field">
+                    </div>
+                </fieldset>
+
+
+                <!--Reference-->
+                <fieldset class="ref1-fieldset">
+                    <legend>
+                        Reference # 1
+                    </legend>
+                    <div class="ref1-container">
+                        <div class="field ref1">
                             <label for="ref1-name">Name</label>
                             <input class="input-field" type="text" id="ref1-name" name="ref1-name">
                         </div>
@@ -136,10 +172,14 @@
                             <label for="ref1-phone">Phone</label>
                             <input class="input-field" type="text" id="ref1-phone" name="ref1-phone">
                         </div>
-                        <h3>
-                            Reference # 2
-                        </h3>
-                        <div class="field">
+                    </div>
+                </fieldset>
+                <fieldset class="ref2-fieldset">
+                    <legend>
+                        Reference # 2
+                    </legend>
+                    <div class="ref2-container">
+                        <div class="field ref2">
                             <label for="ref2-name">Name</label>
                             <input class="input-field" type="text" id="ref2-name" name="ref2-name">
                         </div>
@@ -147,11 +187,18 @@
                             <label for="ref2-phone">Phone</label>
                             <input class="input-field" type="text" id="ref2-phone" name="ref2-phone">
                         </div>
-                        <div class="div-btn">
-                            <button class="btn">Apply</button>
-                        </div>
+                    </div>
                 </fieldset>
-            </form>
-        </main>
-    </body>
+
+                <!--Apply Button-->
+                <div class="div-btn">
+                    <button class="btn" type="submit">Apply</button>
+                </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
 </html>
